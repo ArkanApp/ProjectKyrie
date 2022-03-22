@@ -1,0 +1,13 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400&display=swap');
+
+// Layouts and pages
+@import 'app.layout';
+@import 'auth';
+@import 'dashboard.layout';
+@import 'dashboard.patient_data';
+@import 'dashboard.odontogram';
+@import 'home.layout'
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';

@@ -1,0 +1,169 @@
+.dashboard {
+    .odontogram {
+        width: 100%;
+        box-shadow: none !important;
+        height: min-content;
+        height: -webkit-min-content;
+        height: -moz-min-content;
+        height: -ms-min-content;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+
+        .row {
+            box-shadow: none !important;
+
+            .column {
+                box-shadow: none !important;
+            }
+        }
+
+        .odontogram_side {
+            box-shadow: none !important;
+            margin-top: 14px;
+
+            .row {
+                box-shadow: none !important;
+
+                .column {
+                    display: flex !important;
+                    display: -webkit-flex !important;
+                    display: -moz-flex !important;
+                    display: -ms-flex !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+
+        .odontogram_side.left_side {
+            .row {
+                .column {
+                    justify-content: flex-end;
+                    -webkit-justify-content: flex-end;
+                    -moz-justify-content: flex-end;
+                    -ms-justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+.odontogram_tooth {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    height: 100%;
+    margin: 0px 5px 5px 0px;
+    cursor: pointer;
+
+    .odontogram_tooth_paths {
+        width: 54px;
+        height: 54px;
+
+        .odontogram_tooth_path {
+            stroke: black;
+            stroke-width: 1;
+            fill: white;
+        }
+        
+        .odontogram_tooth_path.active {
+            fill: red;
+        }
+
+        .odontogram_tooth_path.tooth.disease.missing_tooth {
+            fill: rgba(0, 0, 0, 0.7);
+        }
+
+        .odontogram_tooth_path.shape.disease.missing_tooth {
+            stroke: red;
+            stroke-width: 2.5;
+        }
+    }
+
+    @media (max-width: 1232px) {
+        .odontogram_tooth_paths {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 1160px) {
+        .odontogram_tooth_paths {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .odontogram_tooth_paths {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    @media (max-width: 470px) {
+        .odontogram_tooth_paths {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 430px) {
+        .odontogram_tooth_paths {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    @media (max-width: 390px) {
+        .odontogram_tooth_paths {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    @media (max-width: 390px) {
+        .odontogram_tooth_paths {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @media (max-width: 336px) {
+        .odontogram_tooth_paths {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .tooth_number {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.odontogram_tooth.interactive {
+    cursor: auto;
+    
+    .odontogram_tooth_path:hover {
+        cursor: pointer;
+        fill: rgba(255, 0, 0, 0.5);
+    }
+}

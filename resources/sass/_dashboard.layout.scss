@@ -1,0 +1,221 @@
+html.ios {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+html.ios, html.ios body {
+    height: initial !important;
+}
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+
+    .logo_menu {
+        height: 50px;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        text-align: center;
+        align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+
+        .logo_header {
+            color: white;
+        }
+    }
+
+    .dashboard_menu {
+        width: 260px !important;
+        background: #313a46 !important;
+        color: white !important;
+        margin-bottom: 0 !important;
+        border-radius: 0 !important;
+
+        .record_menu {
+            display: none;
+        }
+
+        .header.item {
+            padding-top: 30px !important;
+            text-align: center !important;
+        }
+    }
+
+    .dashboard_content {
+        width: 100%;
+        background-color: rgb(243,244,248);
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+
+        .menu_content {
+            background-color: white;
+            display: flex;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            -moz-flex-direction: row;
+            -ms-flex-direction: row;
+            align-items: center;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            position: relative;
+            padding: 15px 30px;
+
+            .sidebar_button {
+                margin-right: 20px;
+            }
+
+            #search_patient {
+                max-width: 50%;
+            }
+
+            .account_dropdown {
+                display: flex;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                flex-direction: row;
+                -webkit-flex-direction: row;
+                -moz-flex-direction: row;
+                -ms-flex-direction: row;
+                align-items: center;
+                -webkit-align-items: center;
+                -moz-align-items: center;
+                -ms-align-items: center;
+                position: absolute;
+                right: 0;
+                padding: 10px 20px;
+
+                .ui.dropdown {
+                    .user_data {
+                        display: inline-block;
+                    }
+                }
+
+                img.ui.image {
+                    width: 40px;
+                    margin-right: 10px;
+                }
+            }
+
+            @media (max-width: 498px) {
+                .account_dropdown {
+                    .ui.dropdown {
+                        .user_data {
+                            display: none;
+                        }
+                    }
+
+                    img.ui.image {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 366px) {
+            .menu_content {
+                padding: 15px 10px;
+
+                .sidebar_button {
+                    margin-right: 0;
+                }
+
+                .account_dropdown {
+                    padding: 10px 8px;
+                }
+            }
+        }
+
+        .content_page {
+            height: 100%;
+            padding: 0px 30px 15px 30px;
+            overflow-y: auto;
+
+            .dashboard_page_header {
+                display: flex;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                flex-direction: row;
+                -webkit-flex-direction: row;
+                -moz-flex-direction: row;
+                -ms-flex-direction: row;
+                align-items: center;
+                -webkit-align-items: center;
+                -moz-align-items: center;
+                -ms-align-items: center;
+                padding-top: 25px;
+
+                .ui.header {
+                    margin-bottom: 0 !important;
+                    flex: 1;
+                    -webkit-flex: 1;
+                    -moz-flex: 1;
+                    -ms-flex: 1;
+                }
+            }
+
+            .dashboard_segment_header {
+                display: flex;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                flex-direction: row;
+                -webkit-flex-direction: row;
+                -moz-flex-direction: row;
+                -ms-flex-direction: row;
+                align-items: center;
+                -webkit-align-items: center;
+                -moz-align-items: center;
+                -ms-align-items: center;
+                margin-bottom: 20px;
+
+                .ui.header {
+                    margin-bottom: 0 !important;
+                    flex: 1;
+                    -webkit-flex: 1;
+                    -moz-flex: 1;
+                    -ms-flex: 1;
+                }
+            }
+
+            @media (max-width: 516px) {
+                .dashboard_page_header {
+                    flex-direction: column;
+                    -webkit-flex-direction: column;
+                    -moz-flex-direction: column;
+                    -ms-flex-direction: column;
+                }
+            }
+
+            #calendar .fc-list-item {
+                cursor: pointer;
+            }
+        }
+    }
+}
